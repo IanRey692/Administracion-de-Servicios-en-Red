@@ -1,0 +1,286 @@
+**************************************************
+ROUTER 1
+
+enable
+config t
+int f0/0
+ip add 210.1.1.65 255.255.255.192
+no shut
+exit
+int f1/0
+ip add 30.3.3.1 255.255.255.252
+ip ospf cost 5
+no shut
+exit
+int f1/1
+ip add 30.3.3.9 255.255.255.252
+ip ospf cost 1
+no shut
+exit
+router ospf 100
+network 30.3.3.0 0.0.0.3 area 1
+network 30.3.3.8 0.0.0.3 area 1
+redistribute rip subnets
+exit
+router rip
+version 2
+no auto-summary
+network 210.1.1.0
+redistribute ospf 100 metric 2
+end
+write
+
+**************************************************
+ROUTER 2
+
+enable
+config t
+int f0/0
+ip add 210.1.1.129 255.255.255.192
+no shut
+exit
+int f1/0
+ip add 30.3.3.10 255.255.255.252
+ip ospf cost 1
+no shut
+exit
+int f1/1
+ip add 30.3.3.5 255.255.255.252
+ip ospf cost 10
+no shut
+exit
+router ospf 100
+network 30.3.3.4 0.0.0.3 area 1
+network 30.3.3.8 0.0.0.3 area 1
+redistribute rip subnets
+exit
+router rip
+version 2
+no auto-summary
+network 210.1.1.0
+redistribute ospf 100 metric 2
+end
+write
+
+**************************************************
+ROUTER 3
+
+enable
+config t
+int f1/0
+ip add 20.1.1.1 255.255.255.252
+ip ospf cost 6
+no shut
+exit
+int f1/1
+ip add 30.3.3.2 255.255.255.252
+ip ospf cost 5
+no shut
+exit
+int f2/0
+ip add 20.1.1.17 255.255.255.252
+ip ospf cost 2
+no shut
+exit
+int f3/0
+ip add 20.1.1.9 255.255.255.252
+ip ospf cost 7
+no shut
+exit
+router ospf 100
+network 30.3.3.0 0.0.0.3 area 1
+network 20.1.1.0 0.0.0.3 area 0
+network 20.1.1.16 0.0.0.3 area 0
+network 20.1.1.8 0.0.0.3 area 0
+end
+write
+
+**************************************************
+ROUTER 4
+
+enable
+config t
+int f1/0
+ip add 30.3.3.6 255.255.255.252
+ip ospf cost 10
+no shut
+exit
+int f1/1
+ip add 20.1.1.14 255.255.255.252
+ip ospf cost 3
+no shut
+exit
+int f2/1
+ip add 20.1.1.18 255.255.255.252
+ip ospf cost 2
+no shut
+exit
+router ospf 100
+network 30.3.3.4 0.0.0.3 area 1
+network 20.1.1.12 0.0.0.3 area 0
+network 20.1.1.16 0.0.0.3 area 0
+end
+write
+
+**************************************************
+ROUTER 5
+
+enable
+config t
+int f1/0
+ip add 20.1.1.5 255.255.255.252
+ip ospf cost 4
+no shut
+exit
+int f1/1
+ip add 20.1.1.2 255.255.255.252
+ip ospf cost 6
+no shut
+exit
+router ospf 100
+network 20.1.1.4 0.0.0.3 area 0
+network 20.1.1.0 0.0.0.3 area 0
+end
+write
+
+**************************************************
+ROUTER 6
+
+enable
+config t
+int f1/0
+ip add 40.4.4.2 255.255.255.252
+ip ospf cost 1
+no shut
+exit
+int f1/1
+ip add 20.1.1.6 255.255.255.252
+ip ospf cost 4
+no shut
+exit
+int f2/0
+ip add 20.1.1.22 255.255.255.252
+ip ospf cost 1
+no shut
+exit
+router ospf 100
+network 40.4.4.0 0.0.0.3 area 2
+network 20.1.1.4 0.0.0.3 area 0
+network 20.1.1.20 0.0.0.3 area 0
+end
+write
+
+**************************************************
+ROUTER 7
+
+enable
+config t
+int f1/0
+ip add 20.1.1.13 255.255.255.252
+ip ospf cost 3
+no shut
+exit
+int f1/1
+ip add 40.4.4.6 255.255.255.252
+ip ospf cost 1
+no shut
+exit
+int f2/1
+ip add 20.1.1.21 255.255.255.252
+ip ospf cost 1
+no shut
+exit
+int f3/1
+ip add 20.1.1.10 255.255.255.252
+ip ospf cost 7
+no shut
+exit
+router ospf 100
+network 40.4.4.4 0.0.0.3 area 2
+network 20.1.1.12 0.0.0.3 area 0
+network 20.1.1.20 0.0.0.3 area 0
+network 20.1.1.8 0.0.0.3 area 0
+end
+write
+
+**************************************************
+ROUTER 8
+
+enable
+config t
+int f0/0
+ip add 220.2.2.65 255.255.255.192
+no shut
+exit
+int f1/0
+ip add 40.4.4.9 255.255.255.252
+ip ospf cost 1
+no shut
+exit
+int f1/1
+ip add 40.4.4.1 255.255.255.252
+ip ospf cost 1
+no shut
+exit
+router ospf 100
+network 40.4.4.8 0.0.0.3 area 2
+network 40.4.4.0 0.0.0.3 area 2
+redistribute rip subnets
+exit
+router rip
+version 2
+no auto-summary
+network 220.2.2.0
+redistribute ospf 100 metric 2
+end
+write
+
+**************************************************
+ROUTER 9
+
+enable
+config t
+int f0/0
+ip add 220.2.2.1 255.255.255.192
+no shut
+exit
+int f1/0
+ip add 40.4.4.5 255.255.255.252
+ip ospf cost 1
+no shut
+exit
+int f1/1
+ip add 40.4.4.10 255.255.255.252
+ip ospf cost 1
+no shut
+exit
+router ospf 100
+network 40.4.4.4 0.0.0.3 area 2
+network 40.4.4.8 0.0.0.3 area 2
+redistribute rip subnets
+exit
+router rip
+version 2
+no auto-summary
+network 220.2.2.0
+redistribute ospf 100 metric 2
+end
+write
+
+
+**************************************************
+PC'S
+
+ip 210.1.1.70 255.255.255.192 210.1.1.65
+ip 210.1.1.140 255.255.255.192 210.1.1.129
+ip 220.2.2.70 255.255.255.192 220.2.2.65
+ip 220.2.2.10 255.255.255.192 220.2.2.1
+
+
+
+
+
+
+
+
+

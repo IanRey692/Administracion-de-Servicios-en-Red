@@ -1,0 +1,160 @@
+ROUTER A
+
+enable
+config t
+int f0/0
+ip add 40.1.2.1 255.255.255.252
+no shut
+exit
+int f1/0
+ip add 40.1.2.13 255.255.255.252
+no shut
+exit
+int f2/0
+ip add 200.1.1.1 255.255.255.192
+no shut
+exit
+router rip 
+version 2
+network 40.1.2.0 
+network 40.1.2.12
+network 200.1.1.0
+no auto-summary
+exit
+
+
+
+ROUTER B
+
+enable
+config t
+int f0/0
+ip add 40.1.2.5 255.255.255.252
+no shut
+exit
+int f1/0
+ip add 40.1.2.2 255.255.255.252
+no shut
+exit
+int f2/0
+ip add 40.1.2.17 255.255.255.252
+no shut
+exit
+router rip 
+version 2
+network 40.1.2.4 
+network 40.1.2.0
+network 40.1.2.16
+no auto-summary
+exit
+
+
+
+ROUTER C
+
+enable
+config t
+int f0/0
+ip add 40.1.2.9 255.255.255.252
+no shut
+exit
+int f1/0
+ip add 40.1.2.6 255.255.255.252
+no shut
+exit
+int f2/0
+ip add 200.1.1.65 255.255.255.192
+no shut
+exit
+router rip 
+version 2
+network 40.1.2.8 
+network 40.1.2.4
+network 200.1.1.64
+no auto-summary
+exit
+
+
+
+
+ROUTER E
+
+enable
+config t
+int f0/0
+ip add 40.1.2.21 255.255.255.252
+no shut
+exit
+int f1/0
+ip add 40.1.2.10 255.255.255.252
+no shut
+exit
+int f2/0
+ip add 200.1.1.129 255.255.255.192
+no shut
+exit
+router rip 
+version 2
+network 40.1.2.20
+network 40.1.2.8
+network 200.1.1.128
+no auto-summary
+exit
+
+
+
+ROUTER D
+
+enable
+config t
+int f0/0
+ip add 40.1.2.13 255.255.255.252
+no shut
+exit
+int f1/0
+ip add 40.1.2.22 255.255.255.252
+no shut
+exit
+int f2/0
+ip add 200.1.1.193 255.255.255.192
+no shut
+exit
+int f3/0
+ip add 40.1.2.18 255.255.255.252
+no shut
+exit
+router rip 
+version 2
+network 40.1.2.12
+network 40.1.2.20
+network 40.1.2.16
+network 200.1.1.192
+no auto-summary
+exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
