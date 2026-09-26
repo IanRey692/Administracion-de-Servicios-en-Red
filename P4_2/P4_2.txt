@@ -1,0 +1,228 @@
+****************************************
+ROUTER 1
+
+enable
+config t
+int f0/0
+ip add 10.0.0.1 255.255.255.252
+no shut
+exit
+int f2/1
+ip add 10.0.1.2 255.255.255.252
+no shut
+exit
+
+router ospf 100 
+network 10.0.1.0 0.0.0.3 area 0
+redistribute eigrp 100 subnets
+exit
+
+router eigrp 100
+no auto-summary 
+network 10.0.0.0 0.0.0.3
+redistribute ospf 100 metric 10000 100 255 1 1500
+exit
+end
+wr
+
+****************************************
+ROUTER 2
+
+enable
+config t
+int f0/0
+ip add 10.0.0.2 255.255.255.252
+no shut
+exit
+int f2/0
+ip add 10.0.2.1 255.255.255.252
+no shut
+exit
+
+router eigrp 100
+no auto-summary
+network 10.0.0.0 0.0.0.3 
+network 10.0.2.0 0.0.0.3 
+exit
+end
+wr
+
+****************************************
+ROUTER 3
+
+enable
+config t
+int f0/0
+ip add 192.168.5.1 255.255.255.192
+no shut
+exit
+int f2/0
+ip add 10.0.1.1 255.255.255.252
+no shut
+exit
+int f1/0
+ip add 10.0.4.1 255.255.255.252
+no shut
+exit
+int f1/1
+ip add 10.0.3.2 255.255.255.252
+no shut
+exit
+
+router ospf 100 
+network 10.0.1.0 0.0.0.3 area 0
+network 10.0.3.0 0.0.0.3 area 0
+network 10.0.4.0 0.0.0.3 area 0
+network 192.168.5.0 0.0.0.63 area 0
+exit
+end
+wr
+
+****************************************
+ROUTER 4
+
+enable
+config t
+int f0/0
+ip add 192.168.6.1 255.255.255.192
+no shut
+exit
+int f2/1
+ip add 10.0.2.2 255.255.255.252
+no shut
+exit
+int f1/0
+ip add 10.0.7.1 255.255.255.252
+no shut
+exit
+int f1/1
+ip add 10.0.6.2 255.255.255.252
+no shut
+exit
+
+router eigrp 100 
+no auto-summary
+network 10.0.2.0 0.0.0.3 
+network 10.0.6.0 0.0.0.3 
+network 10.0.7.0 0.0.0.3 
+network 192.168.6.0 0.0.0.63 
+exit
+end
+wr
+
+****************************************
+ROUTER 5
+
+enable
+config t
+int f0/0
+ip add 192.168.1.1 255.255.255.192
+no shut
+exit
+int f1/0
+ip add 10.0.3.1 255.255.255.252
+no shut
+exit
+int f1/1
+ip add 10.0.5.2 255.255.255.252
+no shut
+exit
+
+router ospf 100 
+network 10.0.3.0 0.0.0.3 area 0
+network 10.0.5.0 0.0.0.3 area 0
+network 192.168.1.0 0.0.0.63 area 0
+exit
+end
+wr
+
+****************************************
+ROUTER 6
+
+enable
+config t
+int f0/0
+ip add 192.168.2.1 255.255.255.192
+no shut
+exit
+int f1/0
+ip add 10.0.5.1 255.255.255.252
+no shut
+exit
+int f1/1
+ip add 10.0.4.2 255.255.255.252
+no shut
+exit
+
+router ospf 100 
+network 10.0.4.0 0.0.0.3 area 0
+network 10.0.5.0 0.0.0.3 area 0
+network 192.168.2.0 0.0.0.63 area 0
+exit
+end
+wr
+
+****************************************
+ROUTER 7
+
+enable
+config t
+int f0/0
+ip add 192.168.3.1 255.255.255.192
+no shut
+exit
+int f1/0
+ip add 10.0.6.1 255.255.255.252
+no shut
+exit
+int f1/1
+ip add 10.0.8.2 255.255.255.252
+no shut
+exit
+
+router eigrp 100 
+no auto-summary
+network 10.0.6.0 0.0.0.3 
+network 10.0.8.0 0.0.0.3 
+network 192.168.3.0 0.0.0.63 
+exit
+end
+wr
+
+****************************************
+ROUTER 8
+
+enable
+config t
+int f0/0
+ip add 192.168.4.1 255.255.255.192
+no shut
+exit
+int f1/0
+ip add 10.0.8.1 255.255.255.252
+no shut
+exit
+int f1/1
+ip add 10.0.7.2 255.255.255.252
+no shut
+exit
+
+router eigrp 100 
+no auto-summary
+network 10.0.7.0 0.0.0.3 
+network 10.0.8.0 0.0.0.3 
+network 192.168.4.0 0.0.0.63 
+exit
+end
+wr
+
+ip 192.168.1.10 255.255.255.192 192.168.1.1
+ip 192.168.2.10 255.255.255.192 192.168.2.1
+ip 192.168.3.10 255.255.255.192 192.168.3.1
+ip 192.168.4.10 255.255.255.192 192.168.4.1
+ip 192.168.5.10 255.255.255.192 192.168.5.1
+ip 192.168.6.10 255.255.255.192 192.168.6.1
+
+
+
+
