@@ -1,0 +1,215 @@
+****************************************
+ROUTER 1
+
+enable
+config t
+int f1/0
+ip add 10.0.2.1 255.255.255.252
+no shut
+exit
+int f2/0
+ip add 10.0.6.1 255.255.255.252
+no shut
+exit
+int g4/0
+ip add 10.0.10.1 255.255.255.252
+no shut
+exit
+int f1/1
+ip add 10.0.5.2 255.255.255.252
+no shut
+exit
+int f2/1
+ip add 10.0.9.2 255.255.255.252
+no shut
+exit
+int f0/0
+ip add 192.168.1.1 255.255.255.240
+no shut
+exit
+int f3/1
+ip add 10.0.1.2 255.255.255.252
+no shut
+exit
+
+
+router eigrp 100
+no auto-summary
+network 10.0.2.0 0.0.0.3
+network 10.0.6.0 0.0.0.3
+network 10.0.5.0 0.0.0.3
+network 10.0.9.0 0.0.0.3
+network 10.0.10.0 0.0.0.3
+network 10.0.1.0 0.0.0.3
+network 192.168.1.0 0.0.0.15
+end
+
+
+****************************************
+ROUTER 2
+
+enable
+config t
+int f1/0
+ip add 10.0.5.1 255.255.255.252
+no shut
+exit
+int f2/0
+ip add 10.0.9.1 255.255.255.252
+no shut
+exit
+int f1/1
+ip add 10.0.4.2 255.255.255.252
+no shut
+exit
+int f2/1
+ip add 10.0.8.2 255.255.255.252
+no shut
+exit
+int f0/0
+ip add 192.168.2.1 255.255.255.224
+no shut
+exit
+
+router eigrp 100
+no auto-summary
+network 10.0.5.0 0.0.0.3
+network 10.0.9.0 0.0.0.3
+network 10.0.4.0 0.0.0.3
+network 10.0.8.0 0.0.0.3
+network 192.168.2.0 0.0.0.31
+end
+
+****************************************
+ROUTER 3
+
+enable
+config t
+int f1/0
+ip add 10.0.4.1 255.255.255.252
+no shut
+exit
+int f2/0
+ip add 10.0.8.1 255.255.255.252
+no shut
+exit
+int g4/0
+ip add 10.0.10.2 255.255.255.252
+no shut
+exit
+int f1/1
+ip add 10.0.3.2 255.255.255.252
+no shut
+exit
+int f2/1
+ip add 10.0.7.2 255.255.255.252
+no shut
+exit
+int f0/0
+ip add 192.168.3.1 255.255.255.192
+no shut
+exit
+
+router eigrp 100
+no auto-summary
+network 10.0.4.0 0.0.0.3
+network 10.0.8.0 0.0.0.3
+network 10.0.10.0 0.0.0.3
+network 10.0.3.0 0.0.0.3
+network 10.0.7.0 0.0.0.3
+network 192.168.3.0 0.0.0.63
+end
+
+
+****************************************
+ROUTER 4
+
+enable
+config t
+int f1/0
+ip add 10.0.3.1 255.255.255.252
+no shut
+exit
+int f2/0
+ip add 10.0.7.1 255.255.255.252
+no shut
+exit
+int f1/1
+ip add 10.0.2.2 255.255.255.252
+no shut
+exit
+int f2/1
+ip add 10.0.6.2 255.255.255.252
+no shut
+exit
+int f0/0
+ip add 192.168.4.1 255.255.255.248
+no shut
+exit
+
+router eigrp 100
+no auto-summary
+network 10.0.3.0 0.0.0.3
+network 10.0.7.0 0.0.0.3
+network 10.0.2.0 0.0.0.3
+network 10.0.6.0 0.0.0.3
+network 192.168.4.0 0.0.0.7
+end
+
+****************************************
+ROUTER D
+
+enable
+config t
+int f1/1
+ip add 10.0.0.2 255.255.255.252
+no shut
+exit
+int f3/0
+ip add 10.0.1.1 255.255.255.252
+no shut
+exit
+
+router eigrp 100
+no auto-summary
+network 10.0.0.0 0.0.0.3
+network 10.0.1.0 0.0.0.3
+end
+
+
+
+****************************************
+ROUTER ISP
+
+enable
+config t
+int f1/0
+ip add 10.0.0.1 255.255.255.252
+no shut
+exit
+interface f0/0
+ip address dhcp
+no shutdown
+exit
+
+router eigrp 100
+no auto-summary
+redistribute static
+network 10.0.0.0 0.0.0.3
+exit
+
+ip route 0.0.0.0 0.0.0.0 f0/0
+end
+
+****************************************
+PCS
+
+ip 192.168.1.10 255.255.255.240 192.168.1.1
+ip 192.168.2.10 255.255.255.224 192.168.2.1
+ip 192.168.3.10 255.255.255.192 192.168.3.1
+ip 192.168.4.2 255.255.255.248 192.168.4.1
+
+
+
+
+
