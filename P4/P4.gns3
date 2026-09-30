@@ -39,7 +39,7 @@
                 "drawing_id": "9c48a5ec-97d0-45d9-99a0-266a0ef3f9ac",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"12\" height=\"24\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\"> </text></svg>",
+                "svg": "<svg width=\"11\" height=\"24\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\"> </text></svg>",
                 "x": 97,
                 "y": -304,
                 "z": 2
@@ -93,7 +93,7 @@
                 "drawing_id": "726dfdf1-7b07-4aab-a9fa-dacf0ffcbd2b",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"116\" height=\"24\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.168.1.0 /28 </text></svg>",
+                "svg": "<svg width=\"117\" height=\"24\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.168.1.0 /28 </text></svg>",
                 "x": -172,
                 "y": -186,
                 "z": 2
@@ -102,7 +102,7 @@
                 "drawing_id": "fdefe84b-b303-4e21-83e7-ca1a9f29d6c9",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"12\" height=\"24\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\"> </text></svg>",
+                "svg": "<svg width=\"11\" height=\"24\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\"> </text></svg>",
                 "x": 294,
                 "y": 57,
                 "z": 2
@@ -111,7 +111,7 @@
                 "drawing_id": "b24ef8b5-5a24-4673-8a6a-c1bd04ec4f34",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"112\" height=\"24\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.168.2.0 /27</text></svg>",
+                "svg": "<svg width=\"114\" height=\"24\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.168.2.0 /27</text></svg>",
                 "x": 289,
                 "y": 46,
                 "z": 2
@@ -120,7 +120,7 @@
                 "drawing_id": "a3ebdcfc-5cdb-4094-8336-694247ad82a2",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"112\" height=\"24\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.168.3.0 /26</text></svg>",
+                "svg": "<svg width=\"114\" height=\"24\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.168.3.0 /26</text></svg>",
                 "x": 536,
                 "y": -185,
                 "z": 2
@@ -129,7 +129,7 @@
                 "drawing_id": "7cf6e73b-e385-44e4-9947-a8bf5c0fa740",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"116\" height=\"24\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.168.4.0 /29 </text></svg>",
+                "svg": "<svg width=\"117\" height=\"24\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">192.168.4.0 /29 </text></svg>",
                 "x": 277,
                 "y": -516,
                 "z": 2
@@ -138,7 +138,7 @@
                 "drawing_id": "34b69e46-d4a3-4659-84dc-489aa7b2e5c4",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"100\" height=\"24\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">10.0.10.0 /30 </text></svg>",
+                "svg": "<svg width=\"101\" height=\"24\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">10.0.10.0 /30 </text></svg>",
                 "x": 195,
                 "y": -244,
                 "z": 2
@@ -863,13 +863,13 @@
                         "port_number": 0
                     }
                 ],
-                "suspend": true
+                "suspend": false
             }
         ],
         "nodes": [
             {
                 "compute_id": "local",
-                "console": 5000,
+                "console": 5026,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -938,7 +938,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5001,
+                "console": 5027,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -1007,7 +1007,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5002,
+                "console": 5028,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -1076,7 +1076,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5003,
+                "console": 5029,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -1145,7 +1145,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5004,
+                "console": 5030,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -1214,7 +1214,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5005,
+                "console": 5031,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -1283,7 +1283,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5006,
+                "console": 5032,
                 "console_auto_start": false,
                 "console_type": "none",
                 "custom_adapters": [],
@@ -1363,7 +1363,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5007,
+                "console": 5033,
                 "console_auto_start": false,
                 "console_type": "none",
                 "custom_adapters": [],
@@ -1443,7 +1443,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5008,
+                "console": 5034,
                 "console_auto_start": false,
                 "console_type": "none",
                 "custom_adapters": [],
@@ -1523,7 +1523,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5009,
+                "console": 5035,
                 "console_auto_start": false,
                 "console_type": "none",
                 "custom_adapters": [],
@@ -1605,7 +1605,7 @@
                 "compute_id": "local",
                 "console": null,
                 "console_auto_start": false,
-                "console_type": null,
+                "console_type": "none",
                 "custom_adapters": [],
                 "first_port_name": null,
                 "height": 71,
@@ -1625,23 +1625,13 @@
                 "properties": {
                     "interfaces": [
                         {
-                            "name": "Ethernet",
-                            "special": false,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "Ethernet 2",
-                            "special": false,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "Conexi\u00f3n de red Bluetooth 4",
-                            "special": false,
-                            "type": "ethernet"
-                        },
-                        {
                             "name": "Wi-Fi",
                             "special": true,
+                            "type": "ethernet"
+                        },
+                        {
+                            "name": "Ethernet",
+                            "special": false,
                             "type": "ethernet"
                         }
                     ],
@@ -1679,7 +1669,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5011,
+                "console": 5037,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -1708,7 +1698,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5013,
+                "console": 5039,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -1737,7 +1727,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5015,
+                "console": 5042,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -1766,7 +1756,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5017,
+                "console": 5044,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -1798,5 +1788,5 @@
     "type": "topology",
     "variables": null,
     "version": "2.2.61",
-    "zoom": 84
+    "zoom": 50
 }
