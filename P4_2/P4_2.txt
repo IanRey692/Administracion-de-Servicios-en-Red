@@ -17,10 +17,18 @@ network 10.0.1.0 0.0.0.3 area 0
 redistribute eigrp 100 subnets
 exit
 
-router eigrp 100
-no auto-summary 
-network 10.0.0.0 0.0.0.3
-redistribute ospf 100 metric 10000 100 255 1 1500
+no router ospf 100
+no router eigrp 100
+ip route 192.168.1.0 255.255.255.192 10.0.1.1
+ip route 192.168.2.0 255.255.255.192 10.0.1.1
+ip route 192.168.5.0 255.255.255.192 10.0.1.1
+ip route 10.0.3.0 255.255.255.252 10.0.1.1
+ip route 10.0.4.0 255.255.255.252 10.0.1.1
+ip route 10.0.5.0 255.255.255.252 10.0.1.1
+router bgp 100
+neighbor 10.0.0.2 remote-as 200
+redistribute static
+exit
 exit
 end
 wr
@@ -39,10 +47,16 @@ ip add 10.0.2.1 255.255.255.252
 no shut
 exit
 
-router eigrp 100
-no auto-summary
-network 10.0.0.0 0.0.0.3 
-network 10.0.2.0 0.0.0.3 
+no router eigrp 100
+ip route 192.168.3.0 255.255.255.192 10.0.2.2
+ip route 192.168.4.0 255.255.255.192 10.0.2.2
+ip route 192.168.6.0 255.255.255.192 10.0.2.2
+ip route 10.0.6.0 255.255.255.252 10.0.2.2
+ip route 10.0.7.0 255.255.255.252 10.0.2.2
+ip route 10.0.8.0 255.255.255.252 10.0.2.2
+router bgp 200
+neighbor 10.0.0.1 remote-as 100
+redistribute static
 exit
 end
 wr
@@ -70,11 +84,11 @@ no shut
 exit
 
 router ospf 100 
-network 10.0.1.0 0.0.0.3 area 0
 network 10.0.3.0 0.0.0.3 area 0
 network 10.0.4.0 0.0.0.3 area 0
 network 192.168.5.0 0.0.0.63 area 0
 exit
+ip route 0.0.0.0 0.0.0.0 10.0.2.1
 end
 wr
 
@@ -102,11 +116,11 @@ exit
 
 router eigrp 100 
 no auto-summary
-network 10.0.2.0 0.0.0.3 
 network 10.0.6.0 0.0.0.3 
 network 10.0.7.0 0.0.0.3 
 network 192.168.6.0 0.0.0.63 
 exit
+ip route 0.0.0.0 0.0.0.0 10.0.2.1
 end
 wr
 
