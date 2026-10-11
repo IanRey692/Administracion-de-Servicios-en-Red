@@ -1065,7 +1065,7 @@
                 "template_id": "e3ceab22-c29a-41e8-ab18-4e3cf6ff5681",
                 "width": 66,
                 "x": 260,
-                "y": -359,
+                "y": -360,
                 "z": 1
             },
             {
@@ -1341,7 +1341,7 @@
                 "template_id": "e3ceab22-c29a-41e8-ab18-4e3cf6ff5681",
                 "width": 66,
                 "x": 352,
-                "y": -180,
+                "y": -181,
                 "z": 1
             },
             {
@@ -2000,7 +2000,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5000,
+                "console": 5023,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -2069,7 +2069,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5001,
+                "console": 5025,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],

@@ -1,0 +1,63 @@
+Oct 08 22:39:25.401 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Oct 08 22:39:25.402 HYPERVISOR: Started on IP = localhost, TCP port = 50932.
+Oct 08 22:39:25.897 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 08 22:39:25.897 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Ian\GNS3\projects\Administracion de Servicios en Red\P4_2\project-files\dynamips 
+Oct 08 22:39:25.897 GENERAL: working_dir=C:\Users\Ian\GNS3\projects\Administracion de Servicios en Red\P4_2\project-files\dynamips
+Oct 08 22:39:25.897 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Ian\GNS3\projects\Administracion de Servicios en Red\P4_2\project-files\dynamips\2de3aee9-f597-4f7f-ae22-8b1dab71f424 
+Oct 08 22:39:25.902 GENERAL: working_dir=C:\Users\Ian\GNS3\projects\Administracion de Servicios en Red\P4_2\project-files\dynamips\2de3aee9-f597-4f7f-ae22-8b1dab71f424
+Oct 08 22:39:25.902 HYPERVISOR: exec_cmd: vm create R4 4 c7200 
+Oct 08 22:39:25.903 VM: VM R4 created.
+Oct 08 22:39:25.904 HYPERVISOR: exec_cmd: vm set_con_tcp_port R4 5003 
+Oct 08 22:39:25.904 HYPERVISOR: exec_cmd: c7200 get_mac_addr R4 
+Oct 08 22:39:25.904 HYPERVISOR: exec_cmd: vm get_status R4 
+Oct 08 22:39:25.904 HYPERVISOR: exec_cmd: vm slot_add_binding R4 0 0 C7200-IO-FE 
+Oct 08 22:39:25.904 HYPERVISOR: exec_cmd: vm set_disk0 R4 0 
+Oct 08 22:39:25.904 HYPERVISOR: exec_cmd: vm set_exec_area R4 64 
+Oct 08 22:39:25.904 HYPERVISOR: exec_cmd: vm get_status R4 
+Oct 08 22:39:25.904 HYPERVISOR: exec_cmd: vm set_idle_pc R4 0x608927c0 
+Oct 08 22:39:25.905 HYPERVISOR: exec_cmd: vm set_ios R4 C:/Users/Ian/GNS3/images/IOS/c7200-a3jk9s-mz.124-25g.image 
+Oct 08 22:39:25.905 HYPERVISOR: exec_cmd: c7200 set_mac_addr R4 ca04.3e6c.0000 
+Oct 08 22:39:25.905 HYPERVISOR: exec_cmd: vm set_nvram R4 512 
+Oct 08 22:39:25.905 HYPERVISOR: exec_cmd: vm set_ram R4 512 
+Oct 08 22:39:25.905 HYPERVISOR: exec_cmd: vm get_status R4 
+Oct 08 22:39:25.906 HYPERVISOR: exec_cmd: vm slot_add_binding R4 1 0 PA-2FE-TX 
+Oct 08 22:39:25.906 HYPERVISOR: exec_cmd: vm get_status R4 
+Oct 08 22:39:25.906 HYPERVISOR: exec_cmd: vm slot_add_binding R4 2 0 PA-2FE-TX 
+Oct 08 22:39:25.906 HYPERVISOR: exec_cmd: vm get_status R4 
+Oct 08 22:39:25.906 HYPERVISOR: exec_cmd: vm slot_add_binding R4 3 0 PA-2FE-TX 
+Oct 08 22:39:25.906 HYPERVISOR: exec_cmd: vm get_status R4 
+Oct 08 22:39:25.906 HYPERVISOR: exec_cmd: vm slot_add_binding R4 4 0 PA-GE 
+Oct 08 22:39:25.906 HYPERVISOR: exec_cmd: vm get_status R4 
+Oct 08 22:39:25.906 HYPERVISOR: exec_cmd: vm slot_add_binding R4 5 0 PA-GE 
+Oct 08 22:39:25.906 HYPERVISOR: exec_cmd: vm get_status R4 
+Oct 08 22:39:25.907 HYPERVISOR: exec_cmd: vm slot_add_binding R4 6 0 PA-4T+ 
+Oct 08 22:39:32.868 HYPERVISOR: exec_cmd: nio create_udp udp-a12e0f42-53ee-4172-ae0d-c672e875a284 10032 127.0.0.1 10033 
+Oct 08 22:39:33.127 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4 0 0 udp-a12e0f42-53ee-4172-ae0d-c672e875a284 
+Oct 08 22:39:33.128 HYPERVISOR: exec_cmd: vm get_status R4 
+Oct 08 22:39:33.823 HYPERVISOR: exec_cmd: nio create_udp udp-d6d16bb8-f506-4f61-b9cb-324004a87531 10046 127.0.0.1 10047 
+Oct 08 22:39:33.825 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4 1 1 udp-d6d16bb8-f506-4f61-b9cb-324004a87531 
+Oct 08 22:39:33.825 HYPERVISOR: exec_cmd: vm get_status R4 
+Oct 08 22:39:33.858 HYPERVISOR: exec_cmd: nio create_udp udp-3b0f2a8b-c967-4754-b1a5-4ebdeb1eabd8 10050 127.0.0.1 10051 
+Oct 08 22:39:33.860 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4 1 0 udp-3b0f2a8b-c967-4754-b1a5-4ebdeb1eabd8 
+Oct 08 22:39:33.860 HYPERVISOR: exec_cmd: vm get_status R4 
+Oct 08 22:39:34.875 HYPERVISOR: exec_cmd: nio create_udp udp-a6c0ac3d-919c-4512-bae0-b2b35f2695fe 10088 127.0.0.1 10089 
+Oct 08 22:39:34.876 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4 2 1 udp-a6c0ac3d-919c-4512-bae0-b2b35f2695fe 
+Oct 08 22:39:34.876 HYPERVISOR: exec_cmd: vm get_status R4 
+Oct 08 22:39:38.684 HYPERVISOR: exec_cmd: vm set_ghost_status R4 2 
+Oct 08 22:39:38.684 HYPERVISOR: exec_cmd: vm set_ghost_file R4 C:\Users\Ian\GNS3\projects\Administracion de Servicios en Red\P4_2\project-files\dynamips\c7200-a3jk9s-mz.124-25g.image-512.ghost 
+Oct 08 22:39:38.684 HYPERVISOR: exec_cmd: vm get_status R4 
+Oct 08 22:39:38.685 HYPERVISOR: exec_cmd: vm set_config R4 configs\i4_startup-config.cfg 
+Oct 08 22:39:38.685 HYPERVISOR: exec_cmd: vm start R4 
+Oct 08 22:40:08.977 HYPERVISOR: exec_cmd: vm extract_config R4 
+Oct 08 22:48:28.675 HYPERVISOR: exec_cmd: vm set_ios R4 C:/Users/Ian/GNS3/images/IOS/c7200-a3jk9s-mz.124-25g.image 
+Oct 08 23:03:16.441 HYPERVISOR: exec_cmd: vm get_status R4 
+Oct 08 23:03:16.441 HYPERVISOR: exec_cmd: vm stop R4 
+Oct 08 23:03:16.647 VM: VM R4 shutdown.
+Oct 08 23:03:16.648 HYPERVISOR: exec_cmd: vm extract_config R4 
+Oct 08 23:03:18.533 HYPERVISOR: exec_cmd: vm get_status R4 
+Oct 08 23:03:18.534 HYPERVISOR: exec_cmd: vm extract_config R4 
+Oct 08 23:03:18.536 HYPERVISOR: exec_cmd: vm delete R4 
+Oct 08 23:03:18.536 VM: VM R4 destroyed.
+Oct 08 23:03:18.538 HYPERVISOR: exec_cmd: hypervisor stop 
+Oct 08 23:03:18.877 HYPERVISOR: Stopped.
+Oct 08 23:03:18.878 GENERAL: reset done.
